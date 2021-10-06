@@ -37,21 +37,21 @@ public class CPF {
 		if (soma != Integer.parseInt(cpf[9])) {
 			return false;
 		}
-		int soma2 = 0;
-		soma2 += Integer.parseInt(cpf[0]) * 11;
-		soma2 += Integer.parseInt(cpf[1]) * 10;
-		soma2 += Integer.parseInt(cpf[2]) * 9;
-		soma2 += Integer.parseInt(cpf[3]) * 8;
-		soma2 += Integer.parseInt(cpf[4]) * 7;
-		soma2 += Integer.parseInt(cpf[5]) * 6;
-		soma2 += Integer.parseInt(cpf[6]) * 5;
-		soma2 += Integer.parseInt(cpf[7]) * 4;
-		soma2 += Integer.parseInt(cpf[8]) * 3;
-		soma2 += Integer.parseInt(cpf[9]) * 2;
-		soma2 = (soma2 * 10) % 11;
+		
+		soma += Integer.parseInt(cpf[0]) * 11;
+		soma += Integer.parseInt(cpf[1]) * 10;
+		soma += Integer.parseInt(cpf[2]) * 9;
+		soma += Integer.parseInt(cpf[3]) * 8;
+		soma += Integer.parseInt(cpf[4]) * 7;
+		soma += Integer.parseInt(cpf[5]) * 6;
+		soma += Integer.parseInt(cpf[6]) * 5;
+		soma += Integer.parseInt(cpf[7]) * 4;
+		soma += Integer.parseInt(cpf[8]) * 3;
+		soma += Integer.parseInt(cpf[9]) * 2;
+		soma = (soma * 10) % 11;
 
-		if (soma2 == 10 || soma2 == 11) {
-			soma2 = 0;
+		if (soma == 10 || soma == 11) {
+			soma = 0;
 		}
 
 		if (soma != Integer.parseInt(cpf[10])) {
@@ -64,9 +64,9 @@ public class CPF {
 	@Override
 	public String toString() {
 		if (calcularCPF() == false) {
-			return "CPF Inv·lido!";
+			return "CPF Inv√°lido!";
 		} else {
-			return "CPF V·lido!";
+			return "CPF V√°lido!";
 		}
 	}
 
