@@ -38,6 +38,7 @@ public class CPF {
 			return false;
 		}
 		
+		soma = 0;
 		soma += Integer.parseInt(cpf[0]) * 11;
 		soma += Integer.parseInt(cpf[1]) * 10;
 		soma += Integer.parseInt(cpf[2]) * 9;
